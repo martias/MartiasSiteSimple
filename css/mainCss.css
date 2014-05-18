@@ -4158,15 +4158,15 @@ p {
 }
 @font-face {
     font-family: 'interval_proregular';
-    src: url("/wp-content/themes/b2cloud/fonts/interval_pro-webfont.eot");
-    src: url("/wp-content/themes/b2cloud/fonts/interval_pro-webfont.eot?#iefix") format("embedded-opentype"),  url("/wp-content/themes/b2cloud/fonts/interval_pro-webfont.woff") format("woff"),  url("/wp-content/themes/b2cloud/fonts/interval_pro-webfont.ttf") format("truetype"),  url("/wp-content/themes/b2cloud/fonts/interval_pro-webfont.svg#interval_proregular") format("svg");
+    src: url("fonts/interval_pro-webfont.eot");
+    src: url("fonts/interval_pro-webfont.eot?#iefix") format("embedded-opentype"),  url("fonts/interval_pro-webfont.woff") format("woff"),  url("fonts/interval_pro-webfont.ttf") format("truetype"),  url("fonts/interval_pro-webfont.svg#interval_proregular") format("svg");
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'icomoon';
-    src: url("/wp-content/themes/b2cloud/fonts/icomoon.eot");
-    src: url("/wp-content/themes/b2cloud/fonts/icomoon.eot?#iefix") format("embedded-opentype"),  url("/wp-content/themes/b2cloud/fonts/icomoon.woff") format("woff"),  url("/wp-content/themes/b2cloud/fonts/icomoon.ttf") format("truetype"),  url("/wp-content/themes/b2cloud/fonts/icomoon.svg#icomoon") format("svg");
+    src: url("fonts/icomoon.eot");
+    src: url("fonts/icomoon.eot?#iefix") format("embedded-opentype"),  url("fonts/icomoon.woff") format("woff"),  url("fonts/icomoon.ttf") format("truetype"),  url("/fonts/icomoon.svg#icomoon") format("svg");
     font-weight: normal;
     font-style: normal;
 }
@@ -4573,11 +4573,11 @@ img {
 }
 .about-us
 .section.discover {
-    background-image: url("/wp-content/themes/b2cloud/img/panel-discover.jpg");
+    /*background-image: url("/wp-content/themes/b2cloud/img/panel-discover.jpg");*/
 }
 .about-us
 .section.design {
-    background-image: url("/wp-content/themes/b2cloud/img/panel-design.jpg");
+    /*background-image: url("/wp-content/themes/b2cloud/img/panel-design.jpg");*/
 }
 .about-us .we-are {
     text-align: center;
@@ -5076,7 +5076,7 @@ p {
     border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
-    behavior: url(/wp-content/themes/b2cloud/css/css/ie-css3.htc);
+    /*behavior: url(/wp-content/themes/b2cloud/css/css/ie-css3.htc);*/
     position: relative;
     width: 110px;
     height: 110px;
@@ -5617,7 +5617,7 @@ p {
 }
 body.single-b2c_apps
 .blueprints {
-    background: url("/wp-content/themes/b2cloud/img/bg-pattern.jpg") repeat center  #566473; /* #007cc4; */
+    /*background: url("/wp-content/themes/b2cloud/img/bg-pattern.jpg") repeat center  #566473; /* #007cc4; */
     text-align: left;
 }
 @media (max-width: 991px) {
@@ -7661,7 +7661,7 @@ img {
     border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
-    behavior: url(/wp-content/themes/b2cloud/css/css/ie-css3.htc);
+    /*behavior: url(/wp-content/themes/b2cloud/css/css/ie-css3.htc);*/
     position: relative;
     width: 65%;
     height: auto;
@@ -7730,8 +7730,8 @@ img {
 }
 html.ie8
 #headerimage {
-    background: url(/wp-content/themes/b2cloud/img/headerimage.jpg) no-repeat #566473; /* #007cc4; */
-    background-image: url("/wp-content/themes/b2cloud/img/headerimage.jpg") !important;
+    /*background: url(/wp-content/themes/b2cloud/img/headerimage.jpg) no-repeat #566473; /* #007cc4; */*/
+    /*background-image: url("/wp-content/themes/b2cloud/img/headerimage.jpg") !important;*/
 }
 html.ie8
 .socialnav {
