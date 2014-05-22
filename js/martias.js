@@ -1,37 +1,79 @@
 //function emailConsulta(newConsulta, callback) {
 //$("#commentForm").validate();
 
-jQuery('input#submitButton').click( function() {
-	//webServiceURL = "http://localhost:16080/email";
-	webServiceURL = "http://www.martiasmobi.appspot.com/email";
-	// console.log(jQuery('form#commentForm').serialize());
 
-	var emailString = jQuery('#cemail').val();
-	var commentString = jQuery('#ccomment').val();
-	// console.log(emailString + commentString);
-	if (emailString !== "" && commentString !== "") {
-	    jQuery.ajax({
-	        url: webServiceURL,
-	        type: 'POST',
-	        dataType: 'json',
-	        data: jQuery('form#commentForm').serialize(),
-	        success: function(data) {
-	            console.log("POST success");
-	            jQuery('#successMsg').show(500);
-            	setTimeout(function() {
-					jQuery('#successMsg').hide(500);
-				}, 4000); 
-	        },
-			error: function (xhr) { // When Service call fails  
-				console.log(xhr.responseText); 
-				jQuery('#errorMsg').show(500);
-            	setTimeout(function() {
-					jQuery('#errorMsg').hide(500);
-				}, 4000); 
-			}   
-	    });
-	}
+jQuery(document).ready(function() {
+  var form = jQuery('#commentForm'); // contact form
+  var submit = jQuery('#submitButton');  // submit button
+  // var webServiceURL = "http://localhost:16080/email";
+  var webServiceURL = "http://www.martiasmobi.appspot.com/email";
+
+  // form submit event
+  form.on('submit', function(e) {
+    e.preventDefault(); // prevent default form submit
+
+    jQuery.ajax({
+      url: webServiceURL, // form action url
+      type: 'POST', // form submit method get/post
+      dataType: 'html', // request type html/json/xml
+      data: form.serialize(), // serialize form data 
+      beforeSend: function() {
+        submit.val('Sending....'); // change submit button text
+      },
+      success: function(data) {
+        alert.html(data).fadeIn(); // fade in response data
+        form.trigger('reset'); // reset form
+        submit.val('Send');
+ 	    jQuery('#successMsg').show(500);
+    	setTimeout(function() {
+			jQuery('#successMsg').hide(500);
+		}, 4000); 
+      },
+      error: function(e) {
+        console.log(e);
+        submit.val('Send');
+		jQuery('#errorMsg').show(500);
+    	setTimeout(function() {
+			jQuery('#errorMsg').hide(500);
+		}, 4000); 
+      }
+    });
+  });
 });
+
+
+
+// jQuery('input#submitButton').click( function() {
+// 	webServiceURL = "http://localhost:16080/email";
+// 	//webServiceURL = "http://www.martiasmobi.appspot.com/email";
+// 	// console.log(jQuery('form#commentForm').serialize());
+
+// 	var emailString = jQuery('#cemail').val();
+// 	var commentString = jQuery('#ccomment').val();
+// 	// console.log(emailString + commentString);
+// 	if (emailString !== "" && commentString !== "") {
+// 	    jQuery.ajax({
+// 	        url: webServiceURL,
+// 	        type: 'POST',
+// 	        dataType: 'json',
+// 	        data: jQuery('form#commentForm').serialize(),
+// 	        success: function(data) {
+// 	            console.log("POST success");
+// 	            jQuery('#successMsg').show(500);
+//             	setTimeout(function() {
+// 					jQuery('#successMsg').hide(500);
+// 				}, 4000); 
+// 	        },
+// 			error: function (xhr) { // When Service call fails  
+// 				console.log(xhr.responseText); 
+// 				jQuery('#errorMsg').show(500);
+//             	setTimeout(function() {
+// 					jQuery('#errorMsg').hide(500);
+// 				}, 4000); 
+// 			}   
+// 	    });
+// 	}
+// });
 
 // function emailConsulta() {
 // 	var userMessage = "";

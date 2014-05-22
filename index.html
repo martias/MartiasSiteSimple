@@ -389,12 +389,12 @@
 			</div>
 
 			<div class="col-xs-12 col-sm-6"> 
-				<form class="cmxform" id="commentForm" method="get">
+				<form class="cmxform" id="commentForm" method="post" action="">
 					<input id="cemail" type="email" name="email" value="" size="40" class="form-control email" aria-required="true" aria-invalid="false" placeholder="Email Address" required>
 					 <textarea id="ccomment" name="comment" class="form-control message" placeholder="Message" required></textarea>
 					<!-- <a style="width : 100%;" class="btn lrg form contactbtn" onClick="emailConsulta();">Send</a> -->
-					<input id="submitButton"style="width : 100%;" class="btn lrg form contactbtn submit" type="submit" value="Send"/>
-					<div id="successMsg" hidden><p>Email successfully sent !!!</p></div>
+					<input id="submitButton" style="width : 100%;" class="btn lrg form contactbtn submit" type="submit" value="Send"/>
+					<div id="successMsg" hidden><p>Email successfully sent!!!</p></div>
 					<div id="errorMsg" hidden><p>Error sending the Email. Please try again.</p></div>
 				</form>
 			</div>
