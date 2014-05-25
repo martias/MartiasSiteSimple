@@ -1106,6 +1106,11 @@ if (window.jQuery || window.Zepto) {
         $('.navbar').toggleClass("open");
     });
 
+    $("li.toggle-menu").click(function () {
+        $("button.navbar-toggle").toggleClass("active");
+        $('.navbar').toggleClass("open");
+    });
+
     function isMobile() {
         return Modernizr.touch;
         try {
