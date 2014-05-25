@@ -954,7 +954,14 @@ if (window.jQuery || window.Zepto) {
         var logoHeight = $('.logohome').height(),
             navHeight = $('.scrollnav').height();
         $(window).resize(function () {
-            if (isMobile()) return;
+            if (isMobile()) {
+                $('.logohome').css({
+                    top: 0,
+                    'margin-left': -70,
+                    width: 140
+                });
+                return;
+            }
             $("#headerimage").height($(window).height());
             distance = $('.scrollnav').offset().top;
             headerImageCheck();
